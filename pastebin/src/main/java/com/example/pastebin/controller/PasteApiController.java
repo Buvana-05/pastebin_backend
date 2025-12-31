@@ -37,7 +37,7 @@ public class PasteApiController {
 
 		Paste paste = service.create(req.getContent(), req.getTtl(), req.getMaxViews());
 
-		String url = "http://localhost:8080/p/" + paste.getId();
+		String url = "https://pastebin-backend-kwjl.onrender.com/p/" + paste.getId();
 
 		return ResponseEntity.ok(Map.of("id", paste.getId().toString(), "url", url));
 	}
